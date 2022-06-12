@@ -54,3 +54,20 @@ function getRandomNumbers(min, max, count) {
   return randomNumbersArray;
 }
 getRandomNumbers(5, 33, 10);
+
+// 5. Дан массив arr. Найдите среднее арифметическое его элементов.
+// Проверьте задачу на массиве с элементами 12, 15, 20, 25, 59, 79.
+
+arr = [12, 15, 20, 25, 59, 79];
+/**
+ * Get the arithmetic mean of the array elements.
+ * @param {array} array
+ * @returns {number}
+ */
+function getArithmeticMean(array) {
+  const arrayReduce = array.reduce(function (previousValue, currentValue) {
+    return previousValue + currentValue;
+  });
+  return arrayReduce / array.length;
+}
+console.log("Arithmetic mean of arr: ", getArithmeticMean(arr));
