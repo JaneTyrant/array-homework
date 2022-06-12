@@ -31,18 +31,20 @@ function hasNumber(array, number) {
  */
 function hasIdenticalNumbers(array) {
   return array.some(function (element, i, array) {
-    return i !== 0 && element === array[i - 1];
+    return element === array[++i];
   });
 }
+console.log("[2, 2, 1]: ", hasIdenticalNumbers([2, 2, 1]));
+console.log("[1, 2, 1]: ", hasIdenticalNumbers([1, 2, 1]));
 
 // 4. Функция, которая возвращает массив заполненный 10 случайными числами в интервале от 5 до 33. Math.random()
 
 let randomNumbersArray = [];
 /**
  * Get random numbers in the interval and fill the array with them.
- * @param {number} min 
- * @param {number} max 
- * @param {number} count 
+ * @param {number} min
+ * @param {number} max
+ * @param {number} count
  * @returns {array}
  */
 function getRandomNumbers(min, max, count) {
