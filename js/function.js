@@ -65,8 +65,11 @@ arr = [12, 15, 20, 25, 59, 79];
  * @returns {number}
  */
 function getArithmeticMean(array) {
-  const arrayReduce = array.reduce(function (previousValue, currentValue) {
-    return previousValue + currentValue;
+  if (array.length === 0) {
+    return null;
+  }
+  const arrayReduce = array.reduce(function (previousNumber, currentNumber) {
+    return previousNumber + currentNumber;
   });
   return arrayReduce / array.length;
 }
